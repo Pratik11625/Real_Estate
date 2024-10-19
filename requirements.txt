@@ -25,3 +25,4 @@ sse_starlette
 docarray
 arxiv
 gradio
+langchain_experimental
