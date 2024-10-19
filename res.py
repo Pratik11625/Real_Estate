@@ -2,17 +2,17 @@ import os
 import streamlit as st
 import pandas as pd
 from dotenv import load_dotenv
-from geopy.geocoders import Nominatim
-from geopy.extra.rate_limiter import RateLimiter
+# from geopy.geocoders import Nominatim
+# from geopy.extra.rate_limiter import RateLimiter
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_huggingface import HuggingFaceEndpoint
 from langchain.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from shapely.geometry import Point
+# from shapely.geometry import Point
 import requests
 from bs4 import BeautifulSoup
-import geopandas as gpd
+# import geopandas as gpd
 from langchain_community.document_loaders import WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 # Load environment variables (like HuggingFace token)
