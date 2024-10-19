@@ -19,6 +19,7 @@ beautifulsoup4
 langchain_groq
 langchain_core
 fastapi
+faiss-cpu
 uvicorn
 langserve
 sse_starlette
