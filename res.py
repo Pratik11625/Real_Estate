@@ -111,7 +111,7 @@ Each property should include the following details, if available:
 1. **Location**: {location}, in {city}
 2. **BHK Configuration**: {bhk}
 3. **Price**: {price}
-4. **Builder/Group Name**: {group_name} (If available, mention the Tower/Builder name; mention RERA status if applicable)
+4. **Builder/Group Name**: group_name (If available, mention the Tower/Builder name; mention RERA status if applicable)
 5. **Project Amenities**: Provide a brief description of key features, amenities, and any unique selling points of the property.
 6. **Contact Details**: If there is a contact seller or contact owner option, include that. Otherwise, omit.
 7. **Landmark/Address**: If an exact address or landmark is provided, mention it.
