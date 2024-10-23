@@ -83,11 +83,12 @@ If we don't have the flat at a particular location as per their requirement, sho
 Answer the questions based on the context below.
 If you can't answer, reply "I don't know".
 Provide the data in bullet points.
-🏠 :blue[Property 1]
-🏠 :blue[Property 2]
-some more ...
+🏠 :blue[**Property 1**]
+🏠 :blue[**Property 2**]
+some more ... 🏠 :blue[**Property 3  4  5  6  7 ...**]....
 Real estate property in a particular {location}, in {city}, {bhk}, {price}.
-If any description {text}, include **builder name or group name**, 
+If any description {text}, include **Tower name or name provdie to the properties  Builder name or by (...) group name**,
+Provide a brief overview of the property features or additional details about the flat, neighborhood, or nearby facilities.
 """
 
 prompt = ChatPromptTemplate.from_messages([("system", promp_temp), ("user", "{text}")])
