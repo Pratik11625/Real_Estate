@@ -87,8 +87,14 @@ Provide the data in bullet points.
 🏠 :blue[**Property 2**]
 some more ... 🏠 :blue[**Property 3  4  5  6  7 ...**]....
 Real estate property in a particular {location}, in {city}, {bhk}, {price}.
-If any description {text}, include **Tower name or name provdie to the properties  Builder name or by (...) group name**,
-Provide a brief overview of the property features or additional details about the flat, neighborhood, or nearby facilities.
+If any description {text}, include **name provdie to the properties or by (... ) group name or Builder name or Tower name **,
+if the property is verfied with RERA show it too, else don't show,
+Provide a brief overview Project Amenities of the property features or additional details about the flat, neighborhood, or nearby facilities.
+if they have a contact seller data, contact owner data then show, else don't show,
+if they have landmark or address provide with property then show it, else don't show
+
+if we don't have any flat at a particular location or at that price range, show We've found similar properties for you,
+the similar properties base on the BHK and their price range provide by the user.
 """
 
 prompt = ChatPromptTemplate.from_messages([("system", promp_temp), ("user", "{text}")])
