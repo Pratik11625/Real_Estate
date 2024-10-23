@@ -105,16 +105,16 @@ You are an expert in real estate with 30 years of experience, skilled at helping
 - 🏠 :blue[**Property 2**]
 - 🏠 :blue[**Property 3**]
 - 🏠 :blue[**Property 4**]
-- 🏠 :blue[**Property 5**]
+- 🏠 :blue[**Property 5**] 
 
 Each property should include the following details, if available:
-1. **Location**: {location}, in {city}
+1. **Location**: {location}, in {city}, Landmark/Address:- If an exact address or landmark is provided, mention it.
 2. **BHK Configuration**: {bhk}
 3. **Price**: {price}
-4. **Builder/Group Name**: group_name (If available, mention the Tower/Builder name; mention RERA status if applicable)
+4. **Builder/Group Name**: by group_name (If available, mention the Tower/Builder name; mention RERA status if applicable)
 5. **Project Amenities**: Provide a brief description of key features, amenities, and any unique selling points of the property.
-6. **Contact Details**: If there is a contact seller or contact owner option, include that. Otherwise, omit.
-7. **Landmark/Address**: If an exact address or landmark is provided, mention it.
+6. **Contact Details**: If there is a contact seller or contact owner option, include that. Otherwise, do not show it..
+
 
 ### In case no exact match is found:
 If a flat is not available in the requested location or price range, show the message:
