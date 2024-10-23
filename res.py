@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 # import geopandas as gpd
 from langchain_community.document_loaders import WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+import time
 # Load environment variables (like HuggingFace token)
 load_dotenv()
 
