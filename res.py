@@ -19,7 +19,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 load_dotenv()
 
 # Title for the Streamlit App
-st.title("Real Estate Property Search ")
+st.title("🏠 :blue[Real ] Estate :red[Property] Search ")
 
 # HuggingFace Token for API access
 hf_token = os.getenv('HF_TOKEN')
@@ -82,6 +82,9 @@ If we don't have the flat at a particular location as per their requirement, sho
 Answer the questions based on the context below.
 If you can't answer, reply "I don't know".
 Provide the data in bullet points.
+🏠 :blue[Property 1]
+🏠 :blue[Property 2]
+some more ...
 Real estate property in a particular {location}, in {city}, {bhk}, {price}.
 If any description {text}, include **builder name or group name**, 
 """
@@ -101,9 +104,11 @@ description = st.sidebar.text_input("Provide any specific description:", value="
 
 chain = prompt | llm | parser
 
-st.sidebar.title("search your property...")
+st.sidebar.title("🏠 Search Your Property... 🔍")
 
-if st.sidebar.button("Search Property"):
+if st.sidebar.button("🔍 Search Property"):
+    st.subheader("🔍 Searching Your Property...")
+    
     # Prepare the query text for the LLM
     query_text = f"Show me the property of {bhk} BHK in {city} city of {location_input} location, price starting from {price} with description {description}."
     try:
@@ -128,6 +133,12 @@ if st.sidebar.button("Search Property"):
             },)
 
             if results:
+                st.toast('Hip!')
+                time.sleep(.5)
+                st.toast('Hip!')
+                time.sleep(.5)
+                st.toast("Hooray! We have found properties for you", icon='🎉')
+                
                 st.success("LLM Response:")
                 st.success(results)
             else:
@@ -137,4 +148,4 @@ if st.sidebar.button("Search Property"):
         st.error(f"Error fetching results: {e}")
 
 else:
-    st.error("Unable to find the location. Please try again.")
+    st.info("Please provide details and click 'Search Property' to find available properties.")
