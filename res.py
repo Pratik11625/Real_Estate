@@ -93,7 +93,7 @@ retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k
 # Provide a brief overview Project Amenities of the property features or additional details about the flat, neighborhood, or nearby facilities.
 # if they have a contact seller data, contact owner data then show, else don't show,
 # if they have landmark or address provide with property then show it, else don't show
-
+# 4. **Builder/Group Name**: by group_name (If available, mention the Tower/Builder name; mention RERA status if applicable)
 # if we don't have any flat at a particular location or at that price range, show We've found similar properties for you,
 # the similar properties base on the BHK and their price range provide by the user.
 # """
@@ -111,9 +111,8 @@ Each property should include the following details, if available:
 1. **Location**: {location}, in {city}, Landmark/Address:- If an exact address or landmark is provided, mention it.
 2. **BHK Configuration**: {bhk}
 3. **Price**: {price}
-4. **Builder/Group Name**: by group_name (If available, mention the Tower/Builder name; mention RERA status if applicable)
-5. **Project Amenities**: Provide a brief description of key features, amenities, and any unique selling points of the property.
-6. **Contact Details**: If there is a contact seller or contact owner option, include that. Otherwise, do not show it..
+4. **Project Amenities**: Provide a brief description of key features, amenities,  additional details about the flat, neighborhood, or nearby facilities. and any unique selling points of the property.
+5. **Contact Details**: If there is a contact seller or contact owner option, include that. Otherwise, do not show it..
 
 
 ### In case no exact match is found:
