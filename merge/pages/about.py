@@ -1,11 +1,11 @@
 import streamlit as st
 
-"""
-  " res.py is a LLM response code, 
-  \nrestate.py is a chat_history_response,  
-  \nproperty.py is a chatbot_past_history, 
-  \nemi.py is EMI"
-"""
+# """
+#   " res.py is a LLM response code, 
+#   \nrestate.py is a chat_history_response,  
+#   \nproperty.py is a chatbot_past_history, 
+#   \nemi.py is EMI"
+# """
 
 
 st.title("About Our Real Estate App")
