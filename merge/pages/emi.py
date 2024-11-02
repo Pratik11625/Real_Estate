@@ -4,8 +4,8 @@ import plotly.express as px
 # import plotly.graph_objects as go
 
 st.title("Home :red[Loan] EMI :blue[Calculator] ", )
-st.page_link("pages/res.py", label="LLM_response", icon="🏠")
-st.page_link("pages/restate.py", label="Chat_history_response", icon="🏠", )
+# st.page_link("pages/res.py", label="LLM_response", icon="🏠")
+# st.page_link("pages/restate.py", label="Chat_history_response", icon="🏠", )
 st.markdown("Calculate the EMI that you will be required to pay for your home loan with our easy-to-use home loan EMI calculator.")
 
 def EMI(d, p, r, n):  
