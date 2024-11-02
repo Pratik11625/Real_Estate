@@ -51,7 +51,7 @@ pg = st.navigation(
     }
 )
 
-st.logo("download.png",  )
+# st.logo("download.png",  )
 st.sidebar.text("made by kitarp")
 
 pg.run()
