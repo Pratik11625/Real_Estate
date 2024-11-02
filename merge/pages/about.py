@@ -1,14 +1,12 @@
 import streamlit as st
 
-# st.set_page_config(
-#     page_title="About Us",
-#      page_icon="ℹ️",
-#      initial_sidebar_state="expanded",
-#     menu_items={
-#         'Get Help': 'https://www.extremelycoolapp.com/help',
-#         'Report a bug': "https://www.extremelycoolapp.com/bug",
-#         'About': "# This is a header. This is an *extremely* cool app!"
-#     })
+"""
+  " res.py is a LLM response code, 
+  \nrestate.py is a chat_history_response,  
+  \nproperty.py is a chatbot_past_history, 
+  \nemi.py is EMI"
+"""
+
 
 st.title("About Our Real Estate App")
 st.write("""
@@ -31,6 +29,4 @@ We hope this app enhances your property search experience!
 """)
 
 
-st.info(
-  " res.py is a LLM response code, \nrestate.py is a chat_history_response,  \nproperty.py is a chatbot_past_history, \nemi.py is EMI")
 # st.image("path_to_image/about_us_image.jpg", use_column_width=True)
