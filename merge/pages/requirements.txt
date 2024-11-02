@@ -3,6 +3,7 @@ streamlit
 ipykernel
 python-dotenv
 langchain_community
+langchain-ollama
 pypdf
 bs4
 faiss-cpu
