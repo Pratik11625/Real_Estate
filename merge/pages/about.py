@@ -30,4 +30,7 @@ This application is built with:
 We hope this app enhances your property search experience!
 """)
 
+
+st.info(
+  " res.py is a LLM response code, \nrestate.py is a chat_history_response,  \nproperty.py is a chatbot_past_history, \nemi.py is EMI")
 # st.image("path_to_image/about_us_image.jpg", use_column_width=True)
