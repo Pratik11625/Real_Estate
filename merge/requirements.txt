@@ -1,6 +1,7 @@
 langchain
 streamlit
 ipykernel
+plotly
 python-dotenv
 langchain_community
 pypdf
