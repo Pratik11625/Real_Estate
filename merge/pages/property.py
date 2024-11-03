@@ -45,7 +45,7 @@ if not hf_token and groq_api_key:
 # llm = ChatOllama(model="qwen2.5:7b")
 
 # Initialize the HuggingFace LLM
-repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
+# repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
 repo_id = "Qwen/Qwen2.5-72B-Instruct"
 llm = HuggingFaceEndpoint(
     repo_id=repo_id,
