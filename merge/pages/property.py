@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import time
 
 from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEndpoint
 from langchain.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.output_parsers import StrOutputParser
@@ -19,6 +20,7 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_history_aware_retriever
 from langchain.chains import create_retrieval_chain
+from langchain_groq import ChatGroq
 
 from dotenv import load_dotenv
 from streamlit_chat import message
@@ -29,19 +31,32 @@ load_dotenv()
 
 # Initialize Streamlit UI
 st.title("🏠 Real Estate Property Search with Chat History")
-st.markdown("Using the qwen2.5:7b model.")
+# st.markdown("Using the qwen2.5:7b model.")
 
 # Load HuggingFace token
 hf_token = os.getenv('HF_TOKEN')
-if not hf_token:
+groq_api_key = os.getenc("GROQ_API_KEY")
+
+if not hf_token and groq_api_key:
     st.error("HuggingFace token not found! Please set HF_TOKEN in your .env file.")
     st.stop()
 
 # Set up model and embedding
 # llm = ChatOllama(model="qwen2.5:7b")
 # Initialize the HuggingFace LLM
-repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
-llm = HuggingFaceEndpoint(repo_id=repo_id, max_length=150, temperature=0.7, token=hf_token)
+# repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
+# llm = HuggingFaceEndpoint(
+#     repo_id=repo_id,
+#     max_length=150,
+#     temperature=0.7,
+#     token=hf_token
+# )
+
+llm = ChatGroq(
+    groq_api_key=groq_api_key,
+    model="llama3-groq-70b-8192-tool-use-preview",
+)
+
 embedding = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 # Define URLs for scraping property data
