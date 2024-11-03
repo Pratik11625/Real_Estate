@@ -9,6 +9,7 @@ from langchain_huggingface import HuggingFaceEndpoint
 from langchain.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+from langchain_groq import ChatGroq
 
 import requests
 from bs4 import BeautifulSoup
@@ -24,16 +25,21 @@ st.title("Real Estate Property Search ")
 
 # HuggingFace Token for API access
 hf_token = os.getenv('HF_TOKEN')
+groq_api_key = os.getenv("GROQ_API_KEY")
+
 # os.environ["HF_TOKEN"] = st.secrets["HF_TOKEN"]
-if not hf_token:
+if not hf_token and groq_api_key:
     # Set up HuggingFace embeddings model using an environment variable for the API token
       # Use '=' for assignment
     st.error("HuggingFace token not found! Please set HF_TOKEN in your .env file.")
     st.stop()
 
 # Initialize the HuggingFace LLM
-repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
-llm = HuggingFaceEndpoint(repo_id=repo_id, max_length=150, temperature=0.7, token=hf_token)
+# repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
+# llm = HuggingFaceEndpoint(repo_id=repo_id, max_length=150, temperature=0.7, token=hf_token)
+llm = ChatGroq(
+    groq_api_key = groq_api_key,
+    model="llama3-groq-70b-8192-tool-use-preview",)
 # llm = ChatOllama(model="qwen2.5:7b")
 # Hugging Face Embedding Model for Document Retrieval
 embedding = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
