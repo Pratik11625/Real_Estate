@@ -43,19 +43,21 @@ if not hf_token and groq_api_key:
 
 # Set up model and embedding
 # llm = ChatOllama(model="qwen2.5:7b")
-# Initialize the HuggingFace LLM
-# repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
-# llm = HuggingFaceEndpoint(
-#     repo_id=repo_id,
-#     max_length=150,
-#     temperature=0.7,
-#     token=hf_token
-# )
 
-llm = ChatGroq(
-    groq_api_key=groq_api_key,
-    model="llama3-groq-70b-8192-tool-use-preview",
+# Initialize the HuggingFace LLM
+repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
+repo_id = "Qwen/Qwen2.5-72B-Instruct"
+llm = HuggingFaceEndpoint(
+    repo_id=repo_id,
+    max_length=150,
+    temperature=0.7,
+    token=hf_token
 )
+
+# llm = ChatGroq(
+#     groq_api_key=groq_api_key,
+#     model="llama3-groq-70b-8192-tool-use-preview",
+# )
 
 embedding = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
