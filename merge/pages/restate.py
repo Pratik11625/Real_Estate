@@ -36,20 +36,20 @@ st.title("🏠 :blue[Real ] Estate :red[Property] Search with Chat History")
 
 # HuggingFace Token and API key
 hf_token = os.getenv('HF_TOKEN')
-# api_key = os.getenv("GROQ_API_KEY")
+api_key = os.getenv("GROQ_API_KEY")
 
 # Verify token and API key
-if hf_token:
+if hf_token and api_key:
     # Initialize the LLM
-    # llm = ChatGroq(model_name="gemma2-9b-it", groq_api_key=api_key)
+    llm = ChatGroq(model_name="llama3-groq-70b-8192-tool-use-preview", groq_api_key=api_key)
     # llm = ChatOllama(model="qwen2.5:7b")
     # Initialize the HuggingFace LLM
-    repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
+    # repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
     # repo_id = "ibm-granite/granite-3.0-8b-instruct"
     # repo_id = "ibm-granite/granite-3.0-2b-instruct"
     # repo_id = "mosaicml/mpt-7b-instruct"
 
-    llm = HuggingFaceEndpoint(repo_id=repo_id, max_length=250, temperature=0.7, token=hf_token)
+    # llm = HuggingFaceEndpoint(repo_id=repo_id, max_length=250, temperature=0.7, token=hf_token)
 
     # HuggingFace Embedding Model for Document Retrieval
     embedding = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
