@@ -55,7 +55,8 @@ if hf_token and api_key:
     embedding = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
     # Chat session ID
-    session_id = st.text_input("Session ID", value="default_session")
+    # session_id = st.text_input("Session ID", value="default_session")
+    session_id = "default_session"
 
     # Manage chat history in session state
     if "store" not in st.session_state:
