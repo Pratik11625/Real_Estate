@@ -35,7 +35,7 @@ st.title("🏠 Real Estate Property Search with Chat History")
 
 # Load HuggingFace token
 hf_token = os.getenv('HF_TOKEN')
-groq_api_key = os.getenc("GROQ_API_KEY")
+groq_api_key = os.getenv("GROQ_API_KEY")
 
 if not hf_token and groq_api_key:
     st.error("HuggingFace token not found! Please set HF_TOKEN in your .env file.")
